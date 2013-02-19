@@ -44,38 +44,20 @@ public class ModuleTickets
 
 	private PlayerTracker	playerTracker;
 
-	@PreInit
-	public void preLoad(FEModulePreInitEvent e)
-	{
-		
-	}
-
 	@Init
 	public void load(FEModuleInitEvent e)
 	{
 		playerTracker = new PlayerTracker();
 		GameRegistry.registerPlayerTracker(playerTracker);
 	}
-
-	@PostInit
-	public void postLoad(FEModulePostInitEvent e)
-	{
-		
-	}
-
+	
 	@ServerInit
 	public void serverStarting(FEModuleServerInitEvent e)
 	{
 		e.registerServerCommand(new Command());
 		loadAll();
 	}
-
-	@ServerPostInit
-	public void serverStarted(FEModuleServerPostInitEvent e)
-	{
-		
-	}
-
+	
 	@ServerStop
 	public void serverStopping(FEModuleServerStopEvent e)
 	{

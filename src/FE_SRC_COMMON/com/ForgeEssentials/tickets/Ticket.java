@@ -15,17 +15,13 @@ public class Ticket
 {
 	@UniqueLoadingKey
 	@SaveableField
-	public int		id;
-
+	public int			id;
 	@SaveableField
 	public String		creator;
-
 	@SaveableField
 	public String		category;
-
 	@SaveableField
 	public String		message;
-
 	@SaveableField
 	public WarpPoint	point;
 
